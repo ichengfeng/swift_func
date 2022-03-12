@@ -19,6 +19,10 @@
 		04F4167227D8A28900B63D80 /* WaterfallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4166D27D8A28900B63D80 /* WaterfallFlowLayout.swift */; };
 		04F4167327D8A28900B63D80 /* WaterfallMutiSectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4166E27D8A28900B63D80 /* WaterfallMutiSectionFlowLayout.swift */; };
 		04F4167427D8A28900B63D80 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4167027D8A28900B63D80 /* Screen.swift */; };
+		04F4167727D9996400B63D80 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4167627D9996400B63D80 /* ScrollViewController.swift */; };
+		04F4167B27D9D6EE00B63D80 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4167A27D9D6EE00B63D80 /* TextCell.swift */; };
+		04F4167E27D9D74C00B63D80 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4167D27D9D74C00B63D80 /* HomeViewModel.swift */; };
+		04F4168027D9DAF100B63D80 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4167F27D9DAF100B63D80 /* CollectionViewController.swift */; };
 		FF9EB72E2897E5C07CAF5FF1 /* Pods_swift_func.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B818D1247E1C5025B0A524 /* Pods_swift_func.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +42,10 @@
 		04F4166D27D8A28900B63D80 /* WaterfallFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallFlowLayout.swift; sourceTree = "<group>"; };
 		04F4166E27D8A28900B63D80 /* WaterfallMutiSectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallMutiSectionFlowLayout.swift; sourceTree = "<group>"; };
 		04F4167027D8A28900B63D80 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		04F4167627D9996400B63D80 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		04F4167A27D9D6EE00B63D80 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		04F4167D27D9D74C00B63D80 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		04F4167F27D9DAF100B63D80 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		3C6B62064FA217E69F0E0F46 /* Pods-swift_func.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_func.debug.xcconfig"; path = "Target Support Files/Pods-swift_func/Pods-swift_func.debug.xcconfig"; sourceTree = "<group>"; };
 		F3B818D1247E1C5025B0A524 /* Pods_swift_func.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_func.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +109,9 @@
 		04F4166727D8A25500B63D80 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				04F4167C27D9D72D00B63D80 /* ViewModel */,
+				04F4167827D9D6A900B63D80 /* Cell */,
+				04F4167527D9996400B63D80 /* VC */,
 				04F4165E27D8A13600B63D80 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -146,6 +157,39 @@
 				04F4167027D8A28900B63D80 /* Screen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		04F4167527D9996400B63D80 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				04F4167627D9996400B63D80 /* ScrollViewController.swift */,
+				04F4167F27D9DAF100B63D80 /* CollectionViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		04F4167827D9D6A900B63D80 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04F4167927D9D6B200B63D80 /* TextCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		04F4167927D9D6B200B63D80 /* TextCell */ = {
+			isa = PBXGroup;
+			children = (
+				04F4167A27D9D6EE00B63D80 /* TextCell.swift */,
+			);
+			path = TextCell;
+			sourceTree = "<group>";
+		};
+		04F4167C27D9D72D00B63D80 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04F4167D27D9D74C00B63D80 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		23204D69C43435A3E27CB4C3 /* Pods */ = {
@@ -283,11 +327,15 @@
 				04F4164B27D89C7800B63D80 /* AppDelegate.swift in Sources */,
 				04F4166627D8A19B00B63D80 /* MineViewController.swift in Sources */,
 				04F4164D27D89C7800B63D80 /* SceneDelegate.swift in Sources */,
+				04F4168027D9DAF100B63D80 /* CollectionViewController.swift in Sources */,
 				04F4167227D8A28900B63D80 /* WaterfallFlowLayout.swift in Sources */,
 				04F4167427D8A28900B63D80 /* Screen.swift in Sources */,
 				04F4167327D8A28900B63D80 /* WaterfallMutiSectionFlowLayout.swift in Sources */,
+				04F4167727D9996400B63D80 /* ScrollViewController.swift in Sources */,
+				04F4167E27D9D74C00B63D80 /* HomeViewModel.swift in Sources */,
 				04F4167127D8A28900B63D80 /* NavBarView.swift in Sources */,
 				04F4165F27D8A13600B63D80 /* HomeViewController.swift in Sources */,
+				04F4167B27D9D6EE00B63D80 /* TextCell.swift in Sources */,
 				04F4166327D8A17100B63D80 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,8 +18,8 @@ class MainViewController: UITabBarController {
             let tabbarApperance = self.tabBar.standardAppearance
             tabbarApperance.backgroundImage = UIImage(color: UIColor(hexString: "#FFFFFF")!)
             tabbarApperance.shadowImage = UIImage(color: UIColor(hexString: "#FFFFFF")!)
-            tabbarApperance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor(hexString: "#747474")!]
-            tabbarApperance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor(hexString: "#00c9e8")!]
+            tabbarApperance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor(hexString: "#ffa542")!]
+            tabbarApperance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.orange]
             self.tabBar.standardAppearance = tabbarApperance
         } else {
             let rect = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 0.5)
@@ -47,23 +47,23 @@ class MainViewController: UITabBarController {
         self.viewControllers = navs
         
         let normalImages = ["wifi","video"]
-        let selectImages = ["wifi_h","video_h"]
+        let selectImages = ["wifi","video"]
         let titles = ["首页","我的"]
         
         for i in 0...normalImages.count-1 {
             let item : UITabBarItem = self.tabBar.items![i]
-            item.image = UIImage(named: normalImages[i])?.withRenderingMode(.alwaysOriginal)
-            item.selectedImage = UIImage(named: selectImages[i])?.withRenderingMode(.alwaysOriginal)
+            item.image = UIImage(named: selectImages[i])?.byTintColor(UIColor(hexString: "#ffa542")!)?.withRenderingMode(.alwaysOriginal)
+            item.selectedImage = UIImage(named: normalImages[i])?.byTintColor(UIColor.orange)?.withRenderingMode(.alwaysOriginal)
             item.title = titles[i]
-            item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor(hexString: "#747474")!], for: .normal)
-            item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor(hexString: "#00c9e8")!], for: .selected)
+            item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor(hexString: "#ffa542")!], for: .normal)
+            item.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.orange], for: .selected)
         }
         
         self.selectedIndex = 0
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
+        return UIStatusBarStyle.default
     }
 
     /*
