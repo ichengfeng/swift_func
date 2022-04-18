@@ -9,16 +9,104 @@ import UIKit
 
 class HomeViewModel: NSObject {
     
-//    let list : [String] = ["离离原上草，一岁一枯荣。\n野火烧不尽，春风吹又生。\n远芳侵古道，晴翠接荒城。\n又送王孙去，萋萋满别情。", "落霞与孤鹜齐飞，秋水共长天一色", "豫章故郡，洪都新府。星分翼軫，地接衡廬。襟三江而帶五湖，控蠻荊而引甌越。物華天寶，龍光射牛斗之墟；人傑地靈，徐孺下陳蕃之榻。雄州霧列，俊彩星馳。臺隍枕夷夏之交，賓主盡東南之美。都督閻公之雅望，棨戟遙臨；宇文新州之懿範，襜帷暫駐。十旬休暇，勝友如雲。千里逢迎，高朋滿座。騰蛟起鳳，孟學士之詞宗；紫電青霜，王將軍之武庫。家君作宰，路出名區。童子何知？躬逢勝餞。\n\n時維九月，序屬三秋。潦水盡而寒潭清，煙光凝而暮山紫。儼驂騑於上路，訪風景於崇阿。臨帝子之長洲，得仙人之舊館。層臺聳翠，上出重霄；飛閣流丹，下臨無地。鶴汀鳧渚，窮島嶼之縈廻；桂殿蘭宮，即岡巒之體勢。\n\n披繡闥，俯雕甍。山原曠其盈視，川澤紆其駭矚。閭閻撲地，鐘鳴鼎食之家；舸艦迷津，青雀黃龍之舳。雲銷雨霽，彩徹區明。落霞與孤鶩齊飛，秋水共長天一色。漁舟唱晚，響窮彭蠡之濱；雁陣驚寒，聲斷衡陽之浦。\n\n遙襟甫暢，逸興遄飛。爽籟發而清風生，纖歌凝而白雲遏。睢園綠竹，氣凌彭澤之樽；鄴水朱華，光照臨川之筆。四美具，二難并。窮睇眄於中天，極娛遊於暇日。天高地迥，覺宇宙之無窮；興盡悲來，識盈虛之有數。望長安於日下，目吳會於雲間。地勢極而南溟深，天柱高而北辰遠。關山難越，誰悲失路之人；萍水相逢，盡是他鄉之客。懷帝閽而不見，奉宣室以何年？\n\n嗟乎！時運不濟，命途多舛。馮唐易老，李廣難封。屈賈誼於長沙，非無聖主；竄梁鴻於海曲，豈乏明時？所賴君子安貧，達人知命。老當益壯，寧移白首之心；窮且益堅，不墜青雲之志。酌貪泉而覺爽，處涸轍以猶懽。北海雖賒，扶搖可接；東隅已逝，桑榆非晚。孟嘗高潔，空餘報國之心；阮籍猖狂，豈效窮途之哭？\n\n勃，三尺微命，一介書生，無路請纓，等終軍之弱冠；有懷投筆，慕宗慤之長風。捨簪笏於百齡，奉晨昏於萬里。非謝家之寶樹，接孟氏之芳鄰。他日趨庭，叨陪鯉對；今茲捧袂，喜托龍門。楊意不逢，撫凌雲而自惜；鍾期既遇，奏流水以何慚？\n\n嗚呼！勝地不常，盛筵難再。蘭亭已矣，梓澤丘墟。臨別贈言，幸承恩於偉餞；登高作賦，是所望於群公。敢竭鄙誠，恭疏短引。一言均賦，四韻俱成。請灑潘江，各傾陸海云爾。\n滕王高閣臨江渚，佩玉鳴鸞罷歌舞。\n畫棟朝飛南浦雲，珠簾暮捲西山雨。\n閒雲潭影日悠悠，物換星移幾度秋。\n閣中帝子今何在？檻外長江空自流！"]
-    
-    let list : [String] = ["离离原上草，一岁一枯荣。\n野火烧不尽，春风吹又生。\n远芳侵古道，晴翠接荒城。\n又送王孙去，萋萋满别情。", "落霞与孤鹜齐飞，秋水共长天一色","所賴君子安貧，達人知命。老當益壯，寧移白首之心；窮且益堅，不墜青雲之志。酌貪泉而覺爽，處涸轍以猶懽。"]
+    let itemList = [
+        [
+            "sectionTitle": "便民生活",
+            "items" : [
+                ["title": "充值中心", "image": "世界"],
+                ["title": "生活缴费", "image": "世界"],
+                ["title": "健康码", "image": "世界"],
+                ["title": "市民中心", "image": "世界"],
+                ["title": "我的快递", "image": "世界"],
+                ["title": "医疗健康", "image": "世界"],
+                ["title": "菜鸟", "image": "世界"],
+                ["title": "哈啰出行", "image": "世界"],
+                ["title": "铁路12306", "image": "世界"],
+                ["title": "高德打车", "image": "世界"],
+                ["title": "飞猪旅行", "image": "世界"],
+                ["title": "交管12123", "image": "世界"],
+                ["title": "车生活", "image": "世界"],
+                ["title": "国家政务网", "image": "世界"],
+                ["title": "国务院客户端", "image": "世界"],
+                ["title": "医保", "image": "世界"],
+            ]
+        ],
+        [
+            "sectionTitle": "购物娱乐",
+            "items" : [
+                ["title": "饿了吗", "image": "世界"],
+                ["title": "电影演唱", "image": "世界"],
+                ["title": "消费券", "image": "世界"],
+                ["title": "陶特", "image": "世界"],
+                ["title": "彩票", "image": "世界"],
+                ["title": "支付宝会员", "image": "世界"],
+                ["title": "口碑好店", "image": "世界"],
+                ["title": "体育服务", "image": "世界"],
+                ["title": "大牌直降", "image": "世界"],
+                ["title": "天猫同城购", "image": "世界"],
+            ]
+        ],
+        [
+            "sectionTitle": "财富管理",
+            "items" : [
+                ["title": "花呗", "image": "世界"],
+                ["title": "借呗", "image": "世界"],
+                ["title": "基金", "image": "世界"],
+                ["title": "转账", "image": "世界"],
+                ["title": "余额宝", "image": "世界"],
+                ["title": "信用卡还款", "image": "世界"],
+                ["title": "芝麻信用", "image": "世界"],
+                ["title": "红包", "image": "世界"],
+                ["title": "网商银行", "image": "世界"],
+                ["title": "股票", "image": "世界"],
+                ["title": "余利宝", "image": "世界"],
+                ["title": "蚂蚁保", "image": "世界"],
+                ["title": "理财产品", "image": "世界"],
+                ["title": "支付宝荷包", "image": "世界"],
+            ]
+        ],
+        [
+            "sectionTitle": "教育公益",
+            "items" : [
+                ["title": "蚂蚁森林", "image": "世界"],
+                ["title": "运动", "image": "世界"],
+                ["title": "蚂蚁庄园", "image": "世界"],
+                ["title": "芭芭农场", "image": "世界"],
+                ["title": "3小时公益", "image": "世界"],
+                ["title": "爱心捐赠", "image": "世界"],
+                ["title": "蚂蚁新村", "image": "世界"],
+                ["title": "校园派", "image": "世界"],
+            ]
+        ],
+    ]
     
     override init() {
         super.init()
     }
     
-    func getContentBy(index:NSInteger) -> String {
-        return list[index%3]
+    func sectionCount() -> NSInteger {
+        return itemList.count
+    }
+    
+    func rowCount(section: NSInteger) -> NSInteger {
+        let sectionData = getSectionData(section: section) as Dictionary
+        let items : Array = sectionData["items"] as! Array<[String: Any]>
+        return items.count
+    }
+    
+    func getSectionData(section: NSInteger) -> Dictionary<String, Any> {
+        return itemList[section]
+    }
+    
+    func getSectionHeadTitle(section: NSInteger) -> String {
+        let sectionData = getSectionData(section: section) as Dictionary
+        return sectionData["sectionTitle"] as! String
+    }
+    
+    func getRowData(indexPath: IndexPath) -> Dictionary<String, Any> {
+        let sectionData = getSectionData(section: indexPath.section) as Dictionary
+        let items : Array = sectionData["items"] as! Array<[String: Any]>
+        return items[indexPath.row]
     }
     
 }

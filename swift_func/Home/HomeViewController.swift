@@ -10,164 +10,72 @@ import YYCategories
 import MJRefresh
 
 class HomeViewController: UIViewController {
+
+    let mainCollection : UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 12.ar, left: 12.ar, bottom: 0.ar, right: 12.ar)
+        layout.headerReferenceSize = CGSize(width: kScreenWidth, height: 30.ar)
+        layout.footerReferenceSize = CGSize(width: kScreenWidth, height: 12.ar)
+        layout.itemSize = CGSize(width: (kScreenWidth-6.ar*4-12*2.ar)/5, height: 49.ar)
+        layout.minimumInteritemSpacing = 6.ar
+        layout.minimumLineSpacing = 16.ar
         
-    let tableView : UITableView = {
-        let table = UITableView(frame: CGRect.zero, style: UITableView.Style.plain)
-        table.separatorStyle = .none
-        table.estimatedRowHeight = 64.ar
-        table.rowHeight = UITableView.automaticDimension
-        table.tableFooterView = UIView.init(frame: CGRect.zero)
-        table.contentInsetAdjustmentBehavior = .never
-        table.register(TextCell.self, forCellReuseIdentifier: "TextCell")
         
-        let img = UIImageView(image: UIImage(named: "IMG_MIMI_1"))
-        img.contentMode = .scaleAspectFill
-        table.backgroundView = img
-        return table
+        let collection = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collection.showsVerticalScrollIndicator = false
+        collection.showsHorizontalScrollIndicator = false
+        collection.register(HomeItemCell.self, forCellWithReuseIdentifier: "HomeItemCell")
+        collection.register(HomeSectionHeadView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SectionHeadView")
+        collection.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "SectionFooterView")
+        
+        return collection
     }()
-    
-    var rows = 10
-    var navShow = false
+
     let homeViewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Home"
+        self.navigationItem.title = "首页"
         self.navigationController?.navigationBar.isHidden = false
         
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        self.view.addSubview(tableView)
-        tableView.snp.makeConstraints { make in
-            make.top.equalTo(self.view)
-            make.left.right.equalTo(self.view)
-            make.bottom.equalTo(self.view).offset(-Screen.safeAreaBottom()-49)
-        }
-        
-        configRefresh()
-        tableView.mj_header?.beginRefreshing()
-    }
-    
-    
-    func configRefresh() {
-        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { [self] in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.featchData(refresh: true)
-            }
-        })
-        
-        let footer = MJRefreshAutoNormalFooter()
-        footer.setTitle("", for: .idle)
-        footer.isRefreshingTitleHidden = true
-        footer.loadingView?.color = UIColor.gray
-        footer.refreshingBlock = { [self] in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.featchData(refresh: false)
-            }
-        }
-        tableView.mj_footer = footer
-    }
-    
-    @objc func featchData(refresh: Bool) {
-        if refresh == true {
-            rows = 10
-            tableView.mj_header?.endRefreshing()
-            if tableView.mj_footer?.state == MJRefreshState.noMoreData {
-                tableView.mj_footer?.resetNoMoreData()
-            }
-        }else {
-            rows += 10
-            if rows >= 30 {
-                tableView.mj_footer?.endRefreshingWithNoMoreData()
-            }else {
-                tableView.mj_footer?.resetNoMoreData()
-            }
-        }
-        
-        tableView.reloadData()
-    }
-    
-}
-
-extension HomeViewController {
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(navShow, animated: true)
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-}
-
-extension HomeViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        if offsetY <= Screen.navBarHeight() {
-            navShow = true
-            self.navigationController?.setNavigationBarHidden(true, animated: true)
-        }else {
-            navShow = false
-            self.navigationController?.setNavigationBarHidden(false, animated: true)
+        mainCollection.dataSource = self
+        mainCollection.delegate = self
+        self.view.addSubview(mainCollection)
+        mainCollection.snp.makeConstraints { make in
+            make.edges.equalTo(self.view)
         }
     }
 }
 
-extension HomeViewController: UITableViewDelegate,UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rows
+extension HomeViewController: UICollectionViewDataSource,UICollectionViewDelegate {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return homeViewModel.sectionCount()
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return homeViewModel.rowCount(section: section)
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
-        cell.selectionStyle = .none
-        cell.title =  homeViewModel.getContentBy(index: indexPath.row)
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if (kind == UICollectionView.elementKindSectionHeader) {
+            let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SectionHeadView", for: indexPath) as! HomeSectionHeadView
+            sectionHeader.titleLabel.text = homeViewModel.getSectionHeadTitle(section: indexPath.section)
+            return sectionHeader
+        } else {
+            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "SectionFooterView", for: indexPath)
+            footerView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 12.ar)
+            return footerView
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeItemCell", for: indexPath) as! HomeItemCell
+        let rowData : Dictionary = homeViewModel.getRowData(indexPath: indexPath)
+        cell.titleLabel.text = rowData["title"] as? String
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row < rows {
-            let scrollVC = ScrollViewController()
-            scrollVC.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(scrollVC, animated: true)
-        }
-    }
-}
-
-class MineCell: UITableViewCell {
-    var title : String? {
-        didSet{
-            titleLabel.text = title
-        }
-    }
-    
-    var titleLabel : UILabel = {
-        let label = UILabel()
-        label.textColor = UIColor.orange
-        label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 18.ar, weight: .medium)
-        label.numberOfLines = 0
-        return label
-    }()
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        self.backgroundColor = UIColor.clear
-        self.contentView.backgroundColor = UIColor.white.withAlphaComponent(0.6)
-        self.contentView.addSubview(titleLabel)
-        titleLabel.snp.makeConstraints { make in
-            make.edges.equalTo(UIEdgeInsets.init(top: 12.ar, left: 12.ar, bottom: 12.ar, right: 12.ar))
-        }
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }

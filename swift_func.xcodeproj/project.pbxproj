@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04C17AFD27EAF04D0013883E /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17AFC27EAF04D0013883E /* HomeItemCell.swift */; };
+		04C17AFF27EB19950013883E /* HomeSectionHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17AFE27EB19950013883E /* HomeSectionHeadView.swift */; };
+		04C17B0227EC15330013883E /* 206-链表翻转.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17B0127EC15330013883E /* 206-链表翻转.swift */; };
+		04C17B0527EC15690013883E /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17B0427EC15690013883E /* ListNode.swift */; };
+		04C17B0727EC16B90013883E /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17B0627EC16B90013883E /* Stack.swift */; };
+		04C17B0927EC16F10013883E /* 001-两数之和.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17B0827EC16F10013883E /* 001-两数之和.swift */; };
+		04C17B1027EC1C090013883E /* 007-整数反转.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17B0F27EC1C090013883E /* 007-整数反转.swift */; };
+		04C17B1227EC1C310013883E /* 009-回文数.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17B1127EC1C310013883E /* 009-回文数.swift */; };
+		04C17B1427EC1C8F0013883E /* 013-罗马数字转整数.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17B1327EC1C8F0013883E /* 013-罗马数字转整数.swift */; };
+		04C17B1627EC1CE00013883E /* 014-最长公共前缀.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17B1527EC1CE00013883E /* 014-最长公共前缀.swift */; };
+		04C17B1827EC1D630013883E /* 021-合并两个有序链表.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17B1727EC1D630013883E /* 021-合并两个有序链表.swift */; };
+		04C17B1A27EC1DC30013883E /* 026-删除有序数组中的重复项.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17B1927EC1DC30013883E /* 026-删除有序数组中的重复项.swift */; };
+		04C17B1C27EC1F3D0013883E /* 027-移除元素.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17B1B27EC1F3D0013883E /* 027-移除元素.swift */; };
 		04F4164B27D89C7800B63D80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4164A27D89C7800B63D80 /* AppDelegate.swift */; };
 		04F4164D27D89C7800B63D80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4164C27D89C7800B63D80 /* SceneDelegate.swift */; };
 		04F4165427D89C7A00B63D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F4165327D89C7A00B63D80 /* Assets.xcassets */; };
@@ -20,7 +33,6 @@
 		04F4167327D8A28900B63D80 /* WaterfallMutiSectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4166E27D8A28900B63D80 /* WaterfallMutiSectionFlowLayout.swift */; };
 		04F4167427D8A28900B63D80 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4167027D8A28900B63D80 /* Screen.swift */; };
 		04F4167727D9996400B63D80 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4167627D9996400B63D80 /* ScrollViewController.swift */; };
-		04F4167B27D9D6EE00B63D80 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4167A27D9D6EE00B63D80 /* TextCell.swift */; };
 		04F4167E27D9D74C00B63D80 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4167D27D9D74C00B63D80 /* HomeViewModel.swift */; };
 		04F4168027D9DAF100B63D80 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4167F27D9DAF100B63D80 /* CollectionViewController.swift */; };
 		FF9EB72E2897E5C07CAF5FF1 /* Pods_swift_func.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B818D1247E1C5025B0A524 /* Pods_swift_func.framework */; };
@@ -28,6 +40,19 @@
 
 /* Begin PBXFileReference section */
 		043F1307E1225F932A148FD1 /* Pods-swift_func.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_func.release.xcconfig"; path = "Target Support Files/Pods-swift_func/Pods-swift_func.release.xcconfig"; sourceTree = "<group>"; };
+		04C17AFC27EAF04D0013883E /* HomeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
+		04C17AFE27EB19950013883E /* HomeSectionHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionHeadView.swift; sourceTree = "<group>"; };
+		04C17B0127EC15330013883E /* 206-链表翻转.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "206-链表翻转.swift"; sourceTree = "<group>"; };
+		04C17B0427EC15690013883E /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
+		04C17B0627EC16B90013883E /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		04C17B0827EC16F10013883E /* 001-两数之和.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "001-两数之和.swift"; sourceTree = "<group>"; };
+		04C17B0F27EC1C090013883E /* 007-整数反转.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "007-整数反转.swift"; sourceTree = "<group>"; };
+		04C17B1127EC1C310013883E /* 009-回文数.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "009-回文数.swift"; sourceTree = "<group>"; };
+		04C17B1327EC1C8F0013883E /* 013-罗马数字转整数.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "013-罗马数字转整数.swift"; sourceTree = "<group>"; };
+		04C17B1527EC1CE00013883E /* 014-最长公共前缀.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "014-最长公共前缀.swift"; sourceTree = "<group>"; };
+		04C17B1727EC1D630013883E /* 021-合并两个有序链表.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "021-合并两个有序链表.swift"; sourceTree = "<group>"; };
+		04C17B1927EC1DC30013883E /* 026-删除有序数组中的重复项.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "026-删除有序数组中的重复项.swift"; sourceTree = "<group>"; };
+		04C17B1B27EC1F3D0013883E /* 027-移除元素.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "027-移除元素.swift"; sourceTree = "<group>"; };
 		04F4164727D89C7800B63D80 /* swift_func.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swift_func.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F4164A27D89C7800B63D80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F4164C27D89C7800B63D80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +68,6 @@
 		04F4166E27D8A28900B63D80 /* WaterfallMutiSectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallMutiSectionFlowLayout.swift; sourceTree = "<group>"; };
 		04F4167027D8A28900B63D80 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		04F4167627D9996400B63D80 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
-		04F4167A27D9D6EE00B63D80 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		04F4167D27D9D74C00B63D80 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		04F4167F27D9DAF100B63D80 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		3C6B62064FA217E69F0E0F46 /* Pods-swift_func.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_func.debug.xcconfig"; path = "Target Support Files/Pods-swift_func/Pods-swift_func.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +86,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04C17B0027EC14DD0013883E /* LC_Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				04C17B0A27EC17280013883E /* Dependency */,
+				04C17B0827EC16F10013883E /* 001-两数之和.swift */,
+				04C17B0F27EC1C090013883E /* 007-整数反转.swift */,
+				04C17B1127EC1C310013883E /* 009-回文数.swift */,
+				04C17B1327EC1C8F0013883E /* 013-罗马数字转整数.swift */,
+				04C17B1527EC1CE00013883E /* 014-最长公共前缀.swift */,
+				04C17B1727EC1D630013883E /* 021-合并两个有序链表.swift */,
+				04C17B1927EC1DC30013883E /* 026-删除有序数组中的重复项.swift */,
+				04C17B1B27EC1F3D0013883E /* 027-移除元素.swift */,
+				04C17B0127EC15330013883E /* 206-链表翻转.swift */,
+			);
+			path = LC_Algorithm;
+			sourceTree = "<group>";
+		};
+		04C17B0A27EC17280013883E /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				04C17B0627EC16B90013883E /* Stack.swift */,
+				04C17B0427EC15690013883E /* ListNode.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
 		04F4163E27D89C7800B63D80 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +140,7 @@
 				04F4166827D8A25B00B63D80 /* Mine */,
 				04F4166927D8A28900B63D80 /* Public */,
 				04F4166B27D8A28900B63D80 /* Tools */,
+				04C17B0027EC14DD0013883E /* LC_Algorithm */,
 				04F4165327D89C7A00B63D80 /* Assets.xcassets */,
 				04F4165527D89C7A00B63D80 /* LaunchScreen.storyboard */,
 				04F4165827D89C7A00B63D80 /* Info.plist */,
@@ -171,17 +222,10 @@
 		04F4167827D9D6A900B63D80 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				04F4167927D9D6B200B63D80 /* TextCell */,
+				04C17AFC27EAF04D0013883E /* HomeItemCell.swift */,
+				04C17AFE27EB19950013883E /* HomeSectionHeadView.swift */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		04F4167927D9D6B200B63D80 /* TextCell */ = {
-			isa = PBXGroup;
-			children = (
-				04F4167A27D9D6EE00B63D80 /* TextCell.swift */,
-			);
-			path = TextCell;
 			sourceTree = "<group>";
 		};
 		04F4167C27D9D72D00B63D80 /* ViewModel */ = {
@@ -326,17 +370,29 @@
 				04F4166427D8A17100B63D80 /* NavigationController.swift in Sources */,
 				04F4164B27D89C7800B63D80 /* AppDelegate.swift in Sources */,
 				04F4166627D8A19B00B63D80 /* MineViewController.swift in Sources */,
+				04C17B1627EC1CE00013883E /* 014-最长公共前缀.swift in Sources */,
 				04F4164D27D89C7800B63D80 /* SceneDelegate.swift in Sources */,
 				04F4168027D9DAF100B63D80 /* CollectionViewController.swift in Sources */,
 				04F4167227D8A28900B63D80 /* WaterfallFlowLayout.swift in Sources */,
 				04F4167427D8A28900B63D80 /* Screen.swift in Sources */,
+				04C17B1A27EC1DC30013883E /* 026-删除有序数组中的重复项.swift in Sources */,
 				04F4167327D8A28900B63D80 /* WaterfallMutiSectionFlowLayout.swift in Sources */,
+				04C17B0527EC15690013883E /* ListNode.swift in Sources */,
 				04F4167727D9996400B63D80 /* ScrollViewController.swift in Sources */,
+				04C17B0727EC16B90013883E /* Stack.swift in Sources */,
 				04F4167E27D9D74C00B63D80 /* HomeViewModel.swift in Sources */,
+				04C17B1227EC1C310013883E /* 009-回文数.swift in Sources */,
+				04C17B1027EC1C090013883E /* 007-整数反转.swift in Sources */,
+				04C17B1827EC1D630013883E /* 021-合并两个有序链表.swift in Sources */,
 				04F4167127D8A28900B63D80 /* NavBarView.swift in Sources */,
+				04C17B0227EC15330013883E /* 206-链表翻转.swift in Sources */,
+				04C17AFD27EAF04D0013883E /* HomeItemCell.swift in Sources */,
 				04F4165F27D8A13600B63D80 /* HomeViewController.swift in Sources */,
-				04F4167B27D9D6EE00B63D80 /* TextCell.swift in Sources */,
+				04C17B1C27EC1F3D0013883E /* 027-移除元素.swift in Sources */,
+				04C17AFF27EB19950013883E /* HomeSectionHeadView.swift in Sources */,
+				04C17B1427EC1C8F0013883E /* 013-罗马数字转整数.swift in Sources */,
 				04F4166327D8A17100B63D80 /* MainViewController.swift in Sources */,
+				04C17B0927EC16F10013883E /* 001-两数之和.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

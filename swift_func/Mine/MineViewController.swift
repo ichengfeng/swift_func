@@ -12,11 +12,29 @@ class MineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Mine"
+        self.navigationItem.title = "Mine"
         
     }
     
 
+    func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+        if(head == nil) {
+            return nil
+        }
+        var slow = head,  fast = head
+        while(fast != nil) {
+            if(fast!.val != slow!.val) {
+                slow!.next = fast
+                slow = slow!.next
+            }
+            fast = fast!.next
+        }
+        slow!.next = nil
+        return head
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
