@@ -9,7 +9,7 @@ import UIKit
 import YYCategories
 import MJRefresh
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
     let mainCollection : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -76,6 +76,12 @@ extension HomeViewController: UICollectionViewDataSource,UICollectionViewDelegat
         let rowData : Dictionary = homeViewModel.getRowData(indexPath: indexPath)
         cell.titleLabel.text = rowData["title"] as? String
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (indexPath.section == 1 && indexPath.row == 0) {
+            pageJumpTo(nibName: "BezierPathTestController")
+        }
     }
     
 }

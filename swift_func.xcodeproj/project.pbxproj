@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04801E172826620B0061F8D0 /* BezierPathTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04801E162826620B0061F8D0 /* BezierPathTestController.swift */; };
+		04801E19282662D60061F8D0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04801E18282662D60061F8D0 /* BaseViewController.swift */; };
+		04801E1C282673630061F8D0 /* HomeItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04801E1B282673630061F8D0 /* HomeItemModel.swift */; };
+		04B2B3FD280D5CF1001D1C1D /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2B3FC280D5CF1001D1C1D /* TriangleView.swift */; };
+		04B2B400280D6201001D1C1D /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2B3FF280D6201001D1C1D /* RectangleView.swift */; };
+		04B2B402280D6580001D1C1D /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2B401280D6580001D1C1D /* CircleView.swift */; };
 		04C17AFD27EAF04D0013883E /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17AFC27EAF04D0013883E /* HomeItemCell.swift */; };
 		04C17AFF27EB19950013883E /* HomeSectionHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17AFE27EB19950013883E /* HomeSectionHeadView.swift */; };
 		04C17B0227EC15330013883E /* 206-链表翻转.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17B0127EC15330013883E /* 206-链表翻转.swift */; };
@@ -40,6 +46,12 @@
 
 /* Begin PBXFileReference section */
 		043F1307E1225F932A148FD1 /* Pods-swift_func.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift_func.release.xcconfig"; path = "Target Support Files/Pods-swift_func/Pods-swift_func.release.xcconfig"; sourceTree = "<group>"; };
+		04801E162826620B0061F8D0 /* BezierPathTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathTestController.swift; sourceTree = "<group>"; };
+		04801E18282662D60061F8D0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		04801E1B282673630061F8D0 /* HomeItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemModel.swift; sourceTree = "<group>"; };
+		04B2B3FC280D5CF1001D1C1D /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
+		04B2B3FF280D6201001D1C1D /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
+		04B2B401280D6580001D1C1D /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		04C17AFC27EAF04D0013883E /* HomeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
 		04C17AFE27EB19950013883E /* HomeSectionHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionHeadView.swift; sourceTree = "<group>"; };
 		04C17B0127EC15330013883E /* 206-链表翻转.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "206-链表翻转.swift"; sourceTree = "<group>"; };
@@ -86,6 +98,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04801E15282661D80061F8D0 /* BezierPath */ = {
+			isa = PBXGroup;
+			children = (
+				04B2B3FE280D5CF9001D1C1D /* View */,
+				04801E162826620B0061F8D0 /* BezierPathTestController.swift */,
+			);
+			path = BezierPath;
+			sourceTree = "<group>";
+		};
+		04801E1A282673250061F8D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04801E1B282673630061F8D0 /* HomeItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04B2B3FE280D5CF9001D1C1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04B2B3FC280D5CF1001D1C1D /* TriangleView.swift */,
+				04B2B3FF280D6201001D1C1D /* RectangleView.swift */,
+				04B2B401280D6580001D1C1D /* CircleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04C17B0027EC14DD0013883E /* LC_Algorithm */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +192,7 @@
 			children = (
 				04F4166127D8A17000B63D80 /* MainViewController.swift */,
 				04F4166227D8A17100B63D80 /* NavigationController.swift */,
+				04801E18282662D60061F8D0 /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -160,6 +200,7 @@
 		04F4166727D8A25500B63D80 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				04801E1A282673250061F8D0 /* Model */,
 				04F4167C27D9D72D00B63D80 /* ViewModel */,
 				04F4167827D9D6A900B63D80 /* Cell */,
 				04F4167527D9996400B63D80 /* VC */,
@@ -213,6 +254,7 @@
 		04F4167527D9996400B63D80 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				04801E15282661D80061F8D0 /* BezierPath */,
 				04F4167627D9996400B63D80 /* ScrollViewController.swift */,
 				04F4167F27D9DAF100B63D80 /* CollectionViewController.swift */,
 			);
@@ -371,9 +413,11 @@
 				04F4164B27D89C7800B63D80 /* AppDelegate.swift in Sources */,
 				04F4166627D8A19B00B63D80 /* MineViewController.swift in Sources */,
 				04C17B1627EC1CE00013883E /* 014-最长公共前缀.swift in Sources */,
+				04801E19282662D60061F8D0 /* BaseViewController.swift in Sources */,
 				04F4164D27D89C7800B63D80 /* SceneDelegate.swift in Sources */,
 				04F4168027D9DAF100B63D80 /* CollectionViewController.swift in Sources */,
 				04F4167227D8A28900B63D80 /* WaterfallFlowLayout.swift in Sources */,
+				04B2B3FD280D5CF1001D1C1D /* TriangleView.swift in Sources */,
 				04F4167427D8A28900B63D80 /* Screen.swift in Sources */,
 				04C17B1A27EC1DC30013883E /* 026-删除有序数组中的重复项.swift in Sources */,
 				04F4167327D8A28900B63D80 /* WaterfallMutiSectionFlowLayout.swift in Sources */,
@@ -382,12 +426,16 @@
 				04C17B0727EC16B90013883E /* Stack.swift in Sources */,
 				04F4167E27D9D74C00B63D80 /* HomeViewModel.swift in Sources */,
 				04C17B1227EC1C310013883E /* 009-回文数.swift in Sources */,
+				04B2B402280D6580001D1C1D /* CircleView.swift in Sources */,
 				04C17B1027EC1C090013883E /* 007-整数反转.swift in Sources */,
 				04C17B1827EC1D630013883E /* 021-合并两个有序链表.swift in Sources */,
 				04F4167127D8A28900B63D80 /* NavBarView.swift in Sources */,
 				04C17B0227EC15330013883E /* 206-链表翻转.swift in Sources */,
 				04C17AFD27EAF04D0013883E /* HomeItemCell.swift in Sources */,
+				04801E1C282673630061F8D0 /* HomeItemModel.swift in Sources */,
 				04F4165F27D8A13600B63D80 /* HomeViewController.swift in Sources */,
+				04801E172826620B0061F8D0 /* BezierPathTestController.swift in Sources */,
+				04B2B400280D6201001D1C1D /* RectangleView.swift in Sources */,
 				04C17B1C27EC1F3D0013883E /* 027-移除元素.swift in Sources */,
 				04C17AFF27EB19950013883E /* HomeSectionHeadView.swift in Sources */,
 				04C17B1427EC1C8F0013883E /* 013-罗马数字转整数.swift in Sources */,

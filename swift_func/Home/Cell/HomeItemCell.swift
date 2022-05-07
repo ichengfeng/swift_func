@@ -12,6 +12,7 @@ class HomeItemCell: UICollectionViewCell {
     let bgImg : UIImageView = {
         let img = UIImageView()
         img.contentMode = .scaleAspectFit
+        img.isUserInteractionEnabled = true
         return img
     }()
     
@@ -20,6 +21,7 @@ class HomeItemCell: UICollectionViewCell {
         label.textColor = UIColor.orange
         label.font = UIFont.systemFont(ofSize: 12.ar, weight: .bold)
         label.textAlignment = .center
+        label.isUserInteractionEnabled = true
         return label
     }()
     
