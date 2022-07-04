@@ -16,11 +16,12 @@ class HomeViewController: BaseViewController {
         layout.sectionInset = UIEdgeInsets(top: 12.ar, left: 12.ar, bottom: 0.ar, right: 12.ar)
         layout.headerReferenceSize = CGSize(width: kScreenWidth, height: 30.ar)
         layout.footerReferenceSize = CGSize(width: kScreenWidth, height: 12.ar)
-        layout.itemSize = CGSize(width: (kScreenWidth-6.ar*4-12*2.ar)/5, height: 49.ar)
+        
+        layout.itemSize = CGSize(width: (kScreenWidth-6.ar*3-12*2.ar)/4, height: 49.ar)
         layout.minimumInteritemSpacing = 6.ar
         layout.minimumLineSpacing = 16.ar
         
-        
+         
         let collection = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collection.showsVerticalScrollIndicator = false
         collection.showsHorizontalScrollIndicator = false
@@ -73,15 +74,17 @@ extension HomeViewController: UICollectionViewDataSource,UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeItemCell", for: indexPath) as! HomeItemCell
-        let rowData : Dictionary = homeViewModel.getRowData(indexPath: indexPath)
-        cell.titleLabel.text = rowData["title"] as? String
+        let rowModel : HomeItemModel = homeViewModel.getRowData(indexPath: indexPath)
+        cell.titleLabel.text = rowModel.title
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if (indexPath.section == 1 && indexPath.row == 0) {
-            pageJumpTo(nibName: "BezierPathTestController")
+        let rowModel : HomeItemModel = homeViewModel.getRowData(indexPath: indexPath)
+        guard rowModel.routeName != nil && rowModel.routeName!.count > 0 else {
+            return
         }
+        pageJumpTo(nibName: rowModel.routeName!)
     }
     
 }

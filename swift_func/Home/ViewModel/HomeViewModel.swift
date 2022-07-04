@@ -80,33 +80,70 @@ class HomeViewModel: NSObject {
         ],
     ]
     
+    var dataArray : Array<HomeSectionModel> = []
+    
     override init() {
         super.init()
+        
+        let sectionTitles = ["UI组件","功能尝试","代码调试"];
+        let allFuncs = [
+            [
+                "BezierPath":"BezierPathTestController",
+                "Button" : "",
+                "Label" : "",
+                "Image" : "",
+            ],
+            [
+                "MVC" : "",
+                "MVVM" : "",
+                "MVP" : "",
+                "MVCS" : ""
+            ],
+            [
+                "Navigation" : "",
+                "TabBar" : "",
+                "Category" : "",
+                "ActionView" : ""
+            ]
+        ]
+        
+        for sectionTitle in sectionTitles {
+        
+            var cells : Array<HomeItemModel> = []
+            
+            let section = sectionTitles.firstIndex(of: sectionTitle)
+            for (funcName,route) in allFuncs[section!] {
+                let itemModel : HomeItemModel = HomeItemModel(title: funcName, image: "", routeName: route)
+                cells.append(itemModel)
+            }
+            let sectionModel : HomeSectionModel = HomeSectionModel(sectionTitle: sectionTitle, items: cells)
+            dataArray.append(sectionModel)
+        }
+        
     }
     
     func sectionCount() -> NSInteger {
-        return itemList.count
+        return dataArray.count
     }
     
     func rowCount(section: NSInteger) -> NSInteger {
-        let sectionData = getSectionData(section: section) as Dictionary
-        let items : Array = sectionData["items"] as! Array<[String: Any]>
-        return items.count
+        let sectionModel : HomeSectionModel = getSectionData(section: section);
+        return sectionModel.items?.count ?? 0
     }
     
-    func getSectionData(section: NSInteger) -> Dictionary<String, Any> {
-        return itemList[section]
+    func getSectionData(section: NSInteger) -> HomeSectionModel {
+        return dataArray[section]
     }
     
     func getSectionHeadTitle(section: NSInteger) -> String {
-        let sectionData = getSectionData(section: section) as Dictionary
-        return sectionData["sectionTitle"] as! String
+        let sectionModel = getSectionData(section: section)
+        return sectionModel.sectionTitle ?? ""
     }
     
-    func getRowData(indexPath: IndexPath) -> Dictionary<String, Any> {
-        let sectionData = getSectionData(section: indexPath.section) as Dictionary
-        let items : Array = sectionData["items"] as! Array<[String: Any]>
-        return items[indexPath.row]
+    func getRowData(indexPath: IndexPath) -> HomeItemModel {
+        let sectionModel = getSectionData(section: indexPath.section)
+        let rowModel = sectionModel.items![indexPath.row]
+        return rowModel
     }
     
 }
